@@ -10,6 +10,9 @@ const { length, direction, preferred, monochrome, format } = options.bar.media
 const getPlayer = (name = preferred.value) =>
     mpris.getPlayer(name) || mpris.players[0] || null
 
+// The systemtray.bind("items").as(n => 40+n) thing did not work :(
+// const systemtray = await Service.import("systemtray")
+
 const Content = (player: MprisPlayer) => {
     const revealer = Widget.Revealer({
         click_through: true,
@@ -30,7 +33,7 @@ const Content = (player: MprisPlayer) => {
         },
         child: Widget.Label({
             truncate: "end",
-            max_width_chars: length.bind().as(n => n > 0 ? n : -1),
+            max_width_chars: 40, //systemtray.bind("items").as(n => 40+n),// length.bind(),
             label: Utils.merge([
                 player.bind("track_title"),
                 player.bind("track_artists"),
