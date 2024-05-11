@@ -10,6 +10,7 @@ export const substitutes = {
     "preferences-system": "emblem-system-symbolic",
     "com.github.Aylur.ags-symbolic": "controls-symbolic",
     "com.github.Aylur.ags": "controls-symbolic",
+    "Google-chrome": "com.google.Chrome",
 }
 
 export default {
