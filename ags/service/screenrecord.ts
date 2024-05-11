@@ -21,15 +21,16 @@ class Recorder extends Service {
     timer = 0
 
     async start() {
-        if (!dependencies("slurp", "wf-recorder"))
+        if (!dependencies(/*"slurp", */"wf-recorder"))
             return
 
         if (this.recording)
-            return
+            this.stop()
 
         Utils.ensureDirectory(this.#recordings)
         this.#file = `${this.#recordings}/${now()}.mp4`
-        sh(`wf-recorder -g "${await sh("slurp")}" -f ${this.#file} --pixel-format yuv420p`)
+        // removed "-g ${await sh("slurp")}" and added audio flag
+        sh(`wf-recorder -f ${this.#file} -a=alsa_input.pci-0000_00_1f.3.analog-stereo.monitor --pixel-format yuv420p`)
 
         this.recording = true
         this.changed("recording")
