@@ -1,6 +1,6 @@
 import { sh } from "lib/utils"
 
-type Profile = "Performance" | "Balanced" | "Quiet"
+type Profile = "Performance" | "Balanced" | "Power Saving"
 type Mode = "Hybrid" | "Integrated"
 
 class Asusctl extends Service {
@@ -47,7 +47,7 @@ class Asusctl extends Service {
         }
     }
 
-    get profiles(): Profile[] { return ["Performance", "Balanced", "Quiet"] }
+    get profiles(): Profile[] { return ["Performance", "Balanced", "Power Saving"] }
     get profile() { return this.#profile }
     get mode() { return this.#mode }
 }
