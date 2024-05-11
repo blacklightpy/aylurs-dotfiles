@@ -9,7 +9,7 @@ const AsusProfileToggle = () => ArrowToggleButton({
     icon: asusprof.as(p => icons.asusctl.profile[p]),
     label: asusprof,
     connection: [asusctl, () => asusctl.profile !== "Balanced"],
-    activate: () => asusctl.setProfile("Quiet"),
+    activate: () => asusctl.setProfile("Power Saving"),
     deactivate: () => asusctl.setProfile("Balanced"),
     activateOnArrow: false,
 })
