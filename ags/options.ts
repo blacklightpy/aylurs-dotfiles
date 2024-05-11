@@ -125,7 +125,7 @@ const options = mkOptions(OPTIONS, {
         },
         systray: {
             ignore: opt([
-                "KDE Connect Indicator",
+                // "KDE Connect Indicator",
                 "spotify-client",
             ]),
         },
@@ -158,10 +158,14 @@ const options = mkOptions(OPTIONS, {
             favorites: opt([
                 [
                     "firefox",
-                    "wezterm",
+                    "thunar file manager",
                     "org.gnome.Nautilus",
                     "org.gnome.Calendar",
+                    "obsidian",
+                    "com.discordapp.Discord",
                     "spotify",
+                    "com.valvesoftware.Steam",
+                    "org.gnome.Software"
                 ],
             ]),
         },
