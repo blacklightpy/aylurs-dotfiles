@@ -1,3 +1,6 @@
+# Note to Self
+- Install `gtk-launch` in addition to other dependencies
+
 # Hyprland
 
 ![2024-02-20_16-53-17](https://github.com/Aylur/dotfiles/assets/104676705/e1b76d0c-7a3e-48c1-ad68-e4032d7fcc24)
