@@ -2,6 +2,9 @@ import { opt, mkOptions } from "lib/option"
 import { distro } from "lib/variables"
 import { icon } from "lib/utils"
 import icons from "lib/icons"
+import wallpaper from "service/wallpaper"
+
+wallpaper.set("~/.config/background")
 
 const options = mkOptions(OPTIONS, {
     autotheme: opt(false),
